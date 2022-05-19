@@ -40,4 +40,85 @@ fun main() {
                             // b : bit
                             // 100MBps, 100Mbps
 
+    /*
+    Unsigned
+    010101010100101010010
+
+        UInt , UShort, ULong, UByte
+     */
+
+    val uint : UInt = 123u;
+    val ushort : UShort = 65535u
+    val ulong : ULong = 123uL
+
+    /*
+    UnderScore
+    1,234,567
+    1_234_567
+     */
+
+    val million = 1_000_000   // 1000000
+    val cardNum = 1234_5678_9012_3456L
+    val hexa = 0xAB_CD_EF_12
+    val bytes = 0b1010_1100
+
+    println("hexa = ${hexa}")
+
+    /*
+    부동소수점 : Float(4B, 10^38), Double(8B, 10^308)
+                Float : signed(1b), 지수(8b), 가수(23b)
+                Double(1, 11b, 52b)
+
+                pi = 3.1415927
+     */
+
+    val num01 = 3.14;  // Double
+    val num02 = 3.14F; // Float
+
+    println("num02 = ${num02}")
+    val num03 = 3.14E-2;
+    val num04 = 3.14e+2;
+
+    println("num03 = ${num03}")
+    println("num04 = ${num04}")
+
+    /* 반복문 미리보기 */
+
+    var sum: Double = 0.1
+    for(x in 1..100)
+    {
+        println(x)
+        sum += 0.1
+    }
+
+    println("sum = ${sum}")
+
+    println("Max Int = " + Int.MAX_VALUE)
+    println("Min Byte = " + Byte.MIN_VALUE)
+    println("Max UInt = " + UInt.MAX_VALUE)
+    println("MAX Double = " + Double.MAX_VALUE)
+
+    /*
+    논리형 : Boolean true/false
+     */
+    val isOn = false  //
+    val isOff = true
+
+    var isOK : Boolean
+    println("isOn = ${isOn}")
+
+    /*
+    문자형 : Char
+     */
+
+    val initial = 'K'
+    var myChar:Char
+
+    myChar = 'M'
+    myChar = '\uAC03'
+
+    println("myChar = ${myChar}")
+
+
+
 }
