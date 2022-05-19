@@ -119,6 +119,78 @@ fun main() {
 
     println("myChar = ${myChar}")
 
+    var code : Int = 65 ; //0x41, A
+    var codeChar: Char = code.toChar();
+    println("codeChar = ${codeChar}")
+
+    // for(x in 65..90)
+    for(x in codeChar..codeChar + 25)
+    {
+        println(x)
+    }
+
+    /*
+        == : 값이 같냐?
+        === : 메모리가 같냐?
+     */
+
+    var str1 : String = "Kotlin"
+    var str2 : String = "Java"
+    var str3 : String = "Kotlin"
+
+    println("str1 == str2 : ${str1 == str2}")
+    println("str1 == str3 : ${str1 == str3}")
+
+    println("str1 === str2 : ${str1 === str2}")
+    println("str1 === str3 : ${str1 === str3}")
+
+    str3 = "World"
+    str3 = "Kotlin"
+    println("str1 === str3 : ${str1 === str3}")
+
+    var degree = 77
+    val testString1 = "degree = ${degree}"
+    val testString2 = "degree = ${degree + 5}"
+
+    println("testString2 = ${testString2}")
+
+    val myDocument  = """
+        Kotlin 기초문법
+        var a = 1
+        var b : Int = 3;
+        이렇게 합니다.
+    """//.trimIndent()
+
+    println(myDocument)
+
+    // Class Alias
+    // Data Type Alias
+    //  C Lang
+    //      typedef unsigned int IP
+
+    // typealias IP = UInt
+    // 코틀린 null을 허용하지 않는다 : 원칙
+    // null 을 허용하도록 메모리를 만들어줘야만 null 이 가능하다.
+    // null = 0x0 = \0
+
+    var str5 : String = "Hello World"
+    //str5 = null
+
+    // nullable variable : Type?
+    var str6 : String? = "Hello World"
+
+    str6 = null
+    println("length = ${str6?.length}")
+
+    //var len : Int = if(str6 != null) str6.length else -1
+
+    var len = str6?.length
+
+    println("length = ${len}")
+
+
+
+
 
 
 }
