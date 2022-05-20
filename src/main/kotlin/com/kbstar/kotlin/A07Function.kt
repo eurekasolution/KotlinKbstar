@@ -70,6 +70,11 @@ fun main() {
     val greet: () -> Unit = { println("Hello ~~")}
     println("greet = ${greet}")
 
+    greet()
+    var other = greet
+    other()
+
+
     //, Default Argument
     addUser("kdhong", "kdhong@kbstar.com")
     addUser("sslee")
