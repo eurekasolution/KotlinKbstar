@@ -188,7 +188,14 @@ fun main() {
 
     println("length = ${len}")
 
-
+    var str7 : String? = "HelloKotlin"
+    // str7 = null
+    println("str7 : $str7 , length = ${str7?.length ?: -1}")
+    /*
+        a = 3
+        b = 5
+        max = a > b ? a : b
+     */
 
 
 
