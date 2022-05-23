@@ -73,7 +73,6 @@ fun main() {
                     }
                 }
             }
-
             println(Arrays.toString(lotto))
         }
     }
