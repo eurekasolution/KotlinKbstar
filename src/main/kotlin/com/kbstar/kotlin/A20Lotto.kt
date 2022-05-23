@@ -61,6 +61,18 @@ fun main() {
             }
 
             // sorting
+            for(j in 0..lotto.size -1)
+            {
+                for(k in 0..j-1)
+                {
+                    if(lotto[j] < lotto[k])
+                    {
+                        var tmp = lotto[j]
+                        lotto[j] = lotto[k]
+                        lotto[k] = tmp
+                    }
+                }
+            }
 
             println(Arrays.toString(lotto))
         }
