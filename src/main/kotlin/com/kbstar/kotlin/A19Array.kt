@@ -22,5 +22,51 @@ fun main() {
         println("$i  : ${stringArray[i]}")
     }
 
+    println("intArray = ${Arrays.toString(intArray)}")
+
+    var array3 = Array<Int>(4, {0})
+    println("array3 = ${Arrays.toString(array3)}")
+
+    var array4 = IntArray(5, {3})
+    println("array4 = ${Arrays.toString(array4)}")
+
+    var array5 = IntArray(5, {i-> (i+1)*5})
+    println("array5 = ${Arrays.toString(array5)}")
+
+    // get, set
+    var one = array5[1];
+    var two = array5.get(2)
+    println("one = ${one}, two = ${two}")
+
+    array5[1] = 7
+    array5.set(2, 22)
+    println("array5 = ${Arrays.toString(array5)}")
+
+    // 문자열 = 문자들의 배열
+    var hello : String = "HelloKotlinWorld"
+    for(i in 0..hello.length -1)
+    {
+        println("${i} : ${hello[i]}")
+    }
+
+    println("substr 2..5 = " + hello.substring(2..5))
+
+    var str1 = "Hello"
+    var str2 = "World"
+    var str3 = str1 + str2
+    println("str3 = ${str3}")
+
+    println("ABC".repeat(10))
+
+    // 연산자를 새롭게 정의
+    // "ABC" * 10
+
+    var random = Random()
+
+    for(i in 1..10)
+    {
+        var num = random.nextInt(1, 46) // 0~44
+        println(num)
+    }
 
 }
