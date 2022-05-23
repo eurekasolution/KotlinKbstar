@@ -26,33 +26,41 @@ fun main() {
     println("size = " + lotto.size)
     while(true)
     {
-        print("Insert Game # (0 to Exit ) : ")
-        game = readLine()!!.toInt();
+        print("Insert Game Count (0 to Exit): ")
+        game = readLine()!!.toInt()
 
         if(game == 0)
         {
-            println("Good Bye~~")
+            println("Good Bye~")
             break;
         }
 
-        for(x in 1..game)
+        for(i in 1.. game)
         {
-            println("${x} 번째 게임....")
-            for(i in 0..lotto.size -1)
+            println("${i} 번째 게임을 시작합니다.")
+
+            for(j in 0..lotto.size -1)
             {
-                // 일단 무조건 생성
-                lotto[i] = random.nextInt(1, 46)
 
-                // 중복 검사
-                for(j in 0..i -1)
-                {
-                    if(lotto[j] == lotto[i]) {
 
+                while(true) {
+                    var flag = false
+                    lotto[j] = random.nextInt(1, 46)
+
+                    for (k in 0..j - 1) {
+                        if (lotto[k] == lotto[j]) {
+                            print("XX ${lotto[k]}")
+                            flag = true
+                            break
+                        }
                     }
+
+                    if(flag == false)
+                        break
                 }
-
-
             }
+
+            // sorting
 
             println(Arrays.toString(lotto))
         }
