@@ -24,8 +24,24 @@ class Banker: PersonOne{
     }
 }
 
+class PersonTwo(name: String, out:Unit =println("0. [Main Constructor]"))
+{
+    var name = println("1. [Property] PersonTwo name = ${name}")
+    init {
+        println("2. [init] PersonTwo init()")
+    }
+
+    constructor(name:String, age:Int, out:Unit = println("3. [Secondary Constructor]")):this(name)
+    {
+        println("4. name = ${name}, age = ${age}")
+    }
+}
+
 fun main() {
     var kim = Banker("kim")
+
+    println("")
+    var lee = PersonTwo("lee", 11)
 }
 
 
@@ -72,4 +88,16 @@ fun main() {
     Car bus = new Car("bus");
     SportsCar bmw = new SportsCar("bmw", 1)
 
+
+    자바의 접근 권한
+    public
+    protected
+    private
+    _______ : package
+
+
+    Kotlin : public, private, protected, internal
+    internal : 같은 정의에 모듈 내부에서 접근 가능
+
+    private : Information Hiding, Data Encapsulation
  */
