@@ -1,29 +1,19 @@
 package com.kbstar.kotlin
 
+fun test(name:String, out: Unit = println("1. I am test"))
+{
+    var x = println("i am x")
+    println("2. test")
+    out("aaa")
+    println("x = ${x}")
+}
 
-var globals = 1
+fun out(msg:String)
+{
+    println("i am out : ${msg}")
+}
 
 fun main() {
-    var a = 1
-    var b = 2
+    test("main")
 
-    println("a${globals}") 			// A        0 1 2 3    // 1
-    fun inner() {
-        var a=10
-        a ++
-        globals ++
-        println("b${a}")		// B     1 2 10 11   // 11
-    }
-    inner()
-    outter()
-    println("c${a} ") 		            	// C      1 2 3 4     // 1
-    println("d${globals}")                         	// D       1 2 3 4    // 4
-}
-fun outter()
-{
-    var a = 1
-
-    a++
-    globals ++
-    println("e${a}")			// E	1 2 3 4   // 2
 }

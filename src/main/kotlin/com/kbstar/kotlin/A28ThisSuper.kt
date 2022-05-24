@@ -26,9 +26,11 @@ class Banker: PersonOne{
 
 class PersonTwo(name: String, out:Unit =println("0. [Main Constructor]"))
 {
-    var name = println("1. [Property] PersonTwo name = ${name}")
+    var nameCheck  = println("1. [Property] PersonTwo name = ${name}")
+
     init {
         println("2. [init] PersonTwo init()")
+
     }
 
     constructor(name:String, age:Int, out:Unit = println("3. [Secondary Constructor]")):this(name)
@@ -42,6 +44,7 @@ fun main() {
 
     println("")
     var lee = PersonTwo("lee", 11)
+
 }
 
 
