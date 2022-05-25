@@ -1,19 +1,14 @@
 package com.kbstar.kotlin
 
-fun test(name:String, out: Unit = println("1. I am test"))
+fun traceTest(name:String, out:Unit = println("AAA"))
 {
-    var x = println("i am x")
-    println("2. test")
-    out("aaa")
-    println("x = ${x}")
-}
-
-fun out(msg:String)
-{
-    println("i am out : ${msg}")
+    var age = 20
+    age ++
+    var check = println("BBB")
+    println("CCC")
 }
 
 fun main() {
-    test("main")
-
+    traceTest("kim")
+    println("DDD")
 }

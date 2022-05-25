@@ -11,6 +11,14 @@ class Point(var x: Int = 0, var y: Int = 0)
         return  Point(x + p.x, y + p.y )
     }
 
+    operator fun minus(p:Point) : Point {
+        return  Point(x - p.x, y - p.y )
+    }
+
+    operator fun times(p:Point) : Point {
+        return  Point(x * p.x, y / p.y )
+    }
+
     override fun toString(): String {
         return "Point(x=$x, y=$y)"
     }
@@ -27,4 +35,11 @@ fun main() {
     println(point)
     point = p1.plus(p2)
     println(point)
+
+    point = p1 - p2
+    println(point)
+
+    point = p1 * p2
+    println(point)
+
 }
