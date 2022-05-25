@@ -67,4 +67,37 @@ fun main() {
     var nullInitArray = arrayOfNulls<Int>(10)
     println("nullInitArray = ${Arrays.toString(nullInitArray)}")
 
+    // iterator : it, e 반복자
+
+    var array4 = intArrayOf(1,2,3,11,22,33)
+    var it : Iterator<Int> = array4.iterator()
+    while(it.hasNext())
+    {
+        val e = it.next()
+        print("$e ")
+    }
+
+    var array5 = Array(45, {i -> i+1})
+    array5.shuffle()
+    println("array5 = ${Arrays.toString(array5)}")
+    var lotto = array5.sliceArray(0..5)
+    lotto.sort()
+    lotto = lotto.sortedArrayDescending()
+    println("lotto = ${Arrays.toString(lotto)}")
+
+    // Filter
+    var fruit = arrayOf("applemango", "apple", "banana", "grape", "mango", "avocado", "kiwi", "strawberry", "blackberry")
+
+    val x = fruit
+                .filter { it.startsWith("a")  }
+        .sortedBy { it }
+        .map { it.uppercase() }
+    println(x.toString())
+
+    val xx = fruit
+        .filter { it.contains('a')  }
+        .sortedBy { it }
+        .map { it.uppercase() }
+    println(xx.toString())
+
 }
